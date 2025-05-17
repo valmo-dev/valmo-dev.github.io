@@ -1,7 +1,9 @@
 <script setup></script>
 
 <template>
-  <div class="h-screen bg-background-primary font-primary font-normal">
+  <div
+    class="min-h-screen opacity-100 transition-opacity duration-300 bg-background-primary font-primary font-normal"
+  >
     <RouterView />
   </div>
 </template>
