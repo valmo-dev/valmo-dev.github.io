@@ -1,35 +1,47 @@
-@import './base.css';
+@import 'tailwindcss';
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
+@font-face {
+  font-family: 'Clash Display';
+  src:
+    url('./fonts/ClashDisplay-Regular.woff2') format('woff2'),
+    url('./fonts/ClashDisplay-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
+@font-face {
+  font-family: 'Clash Display';
+  src:
+    url('./fonts/ClashDisplay-Semibold.woff2') format('woff2'),
+    url('./fonts/ClashDisplay-Semibold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
+@font-face {
+  font-family: 'Clash Display';
+  src:
+    url('./fonts/ClashDisplay-Bold.woff2') format('woff2'),
+    url('./fonts/ClashDisplay-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
 }
 
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
+@theme {
+  --font-primary: 'Clash Display', sans-serif;
+  --color-primary: #da0037;
+  --color-secondary: #333333;
+  --color-white: #ededed;
+  --color-black: #000000;
+  --color-background-primary: #212121;
+}
 
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
+@layer utilities {
+  .custom-text-outline-white {
+    -webkit-text-stroke-width: 2px; /* Ajustez cette valeur (ex: 1px, 2px, 3px) pour l'épaisseur du contour */
+    -webkit-text-stroke-color: var(--color-white);
   }
 }
