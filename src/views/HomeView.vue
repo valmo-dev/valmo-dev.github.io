@@ -1,9 +1,11 @@
 <script setup>
-import TheWelcome from '../components/TheWelcome.vue'
+import Navbar from '../components/NavBar.vue'
+import SectionTitle from '../components/SectionTitle.vue'
 </script>
 
 <template>
-  <main>
-    <TheWelcome />
+  <main class="py-8 w-full max-w-5xl mx-auto flex flex-col gap-20">
+    <Navbar />
+    <SectionTitle />
   </main>
 </template>
