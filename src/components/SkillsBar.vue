@@ -2,16 +2,16 @@
 import { ref } from 'vue'
 
 const skills = ref([
-  { name: 'JavaScript', icon: '../assets/img/cib-javascript.png' },
-  { name: 'Php', icon: '../assets/img/cib-php.png' },
-  { name: 'Vue', icon: '../assets/img/cib-vue-js.png' },
-  { name: 'React', icon: '../assets/img/cib-react.png' },
-  { name: 'Laravel', icon: '../assets/img/cib-laravel.png' },
-  { name: 'MySQL', icon: '../assets/img/cib-mysql.png' },
-  { name: 'Docker', icon: '../assets/img/cib-docker.png' },
-  { name: 'Figma', icon: '../assets/img/cib-figma.png' },
-  { name: 'VS Code', icon: '../assets/img/cib-visual-studio-code.png' },
-  { name: 'Git', icon: '../assets/img/cib-github.png' },
+  { name: 'JavaScript', icon: '/img/cib-javascript.png' },
+  { name: 'Php', icon: '/img/cib-php.png' },
+  { name: 'Vue', icon: '/img/cib-vue-js.png' },
+  { name: 'React', icon: '/img/cib-react.png' },
+  { name: 'Laravel', icon: '/img/cib-laravel.png' },
+  { name: 'MySQL', icon: '/img/cib-mysql.png' },
+  { name: 'Docker', icon: '/img/cib-docker.png' },
+  { name: 'Figma', icon: '/img/cib-figma.png' },
+  { name: 'VS Code', icon: '/img/cib-visual-studio-code.png' },
+  { name: 'Git', icon: '/img/cib-github.png' },
 ])
 
 const displayedSkills = ref([...skills.value, ...skills.value])
@@ -31,9 +31,9 @@ const displayedSkills = ref([...skills.value, ...skills.value])
           v-if="skill.icon"
           :src="skill.icon"
           :alt="skill.name"
-          class="h-6 w-6 sm:h-8 sm:w-8 mr-2 sm:mr-3"
+          class="h-8 w-8 sm:h-12 sm:w-12 mr-2 sm:mr-3"
         />
-        <span class="text-white text-lg sm:text-xl font-semibold whitespace-nowrap">{{
+        <span class="text-white text-xl sm:text-3xl font-semibold whitespace-nowrap">{{
           skill.name
         }}</span>
       </div>
