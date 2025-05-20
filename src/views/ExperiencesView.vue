@@ -1,5 +1,9 @@
+<script setup>
+import SectionTitle from '../components/SectionTitle.vue'
+</script>
+
 <template>
-  <div class="about">
-    <h1>This is an experience page</h1>
+  <div class="">
+    <SectionTitle firstTitle="Parcours" secondTitle="Mon" />
   </div>
 </template>
