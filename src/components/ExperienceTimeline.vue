@@ -115,7 +115,7 @@ const processedEducations = computed(() => processItems(educations, 'education')
                 />
                 <div
                   v-else
-                  class="w-20 rounded-md bg-neutral-700 flex items-center justify-center shadow-sm"
+                  class="w-20 rounded-md bg-secondary flex items-center justify-center shadow-sm"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
