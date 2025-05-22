@@ -1,16 +1,19 @@
 <script setup>
 import Navbar from '../components/NavBar.vue'
+import HeroTitle from '../components/HeroTitle.vue'
 import SectionTitle from '../components/SectionTitle.vue'
 // import HelloButton from '../components/HelloButton.vue'
 import HeroText from '../components/HeroText.vue'
 import CircleDecoration from '../components/CircleDecoration.vue'
 import HeroAvatar from '@/components/HeroAvatar.vue'
 import SkillsBar from '@/components/SkillsBar.vue'
+import ExperienceTimeline from '@/components/ExperienceTimeline.vue'
+import Footer from '@/components/FooterSection.vue'
 </script>
 
 <template>
   <main
-    class="relative flex min-h-[100vh] w-full flex-col items-center justify-between bg-background-primary bg-[linear-gradient(to_right,#80808033_1px,transparent_1px),linear-gradient(to_bottom,#80808033_1px,transparent_1px)] bg-[size:70px_70px] pt-6 lg:pt-0"
+    class="relative flex min-h-[100vh] w-full flex-col items-center justify-between bg-background-primary bg-[linear-gradient(to_right,#80808033_1px,transparent_1px),linear-gradient(to_bottom,#80808033_1px,transparent_1px)] bg-[size:70px_70px] pt-6 lg:pt-0 gap-12"
   >
     <div
       class="absolute -top-80 scale-75 sm:scale-100 sm:-top-96 md:-top-145 -left-40 sm:-left-32 md:-left-50 z-0"
@@ -20,7 +23,7 @@ import SkillsBar from '@/components/SkillsBar.vue'
     <!-- <div class="relative z-10 flex flex-col gap-8 sm:gap-12 md:gap-16"> -->
     <!-- <HelloButton /> -->
     <Navbar class="top-0 w-full max-w-7xl" />
-    <SectionTitle firstTitle="Developpeur" secondTitle="Fullstack" />
+    <HeroTitle firstTitle="Developpeur" secondTitle="Fullstack" />
     <div
       class="mx-auto w-full max-w-7xl px-5 py-10 md:py-20 text-left flex flex-col lg:flex-row items-center z-10"
     >
@@ -33,5 +36,9 @@ import SkillsBar from '@/components/SkillsBar.vue'
     </div>
     <!-- </div> -->
     <SkillsBar />
+    <SectionTitle firstTitle="Mon" secondTitle="Parcours" />
+    <ExperienceTimeline class="w-full max-w-5xl" />
+    <SectionTitle firstTitle="Mes" secondTitle="Projets" />
+    <Footer />
   </main>
 </template>
