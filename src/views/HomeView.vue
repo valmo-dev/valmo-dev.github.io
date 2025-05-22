@@ -13,7 +13,7 @@ import Footer from '@/components/FooterSection.vue'
 
 <template>
   <main
-    class="relative flex min-h-[100vh] w-full flex-col items-center justify-between bg-background-primary bg-[linear-gradient(to_right,#80808033_1px,transparent_1px),linear-gradient(to_bottom,#80808033_1px,transparent_1px)] bg-[size:70px_70px] pt-6 lg:pt-0 gap-12"
+    class="relative flex min-h-[100vh] w-full flex-col items-center justify-between bg-background-primary bg-[linear-gradient(to_right,#80808033_1px,transparent_1px),linear-gradient(to_bottom,#80808033_1px,transparent_1px)] bg-[size:70px_70px] pt-6 lg:pt-0 gap-4"
   >
     <div
       class="absolute -top-80 scale-75 sm:scale-100 sm:-top-96 md:-top-145 -left-40 sm:-left-32 md:-left-50 z-0"
