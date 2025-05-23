@@ -21,7 +21,7 @@ defineProps({
       {{ firstTitle }}
     </h1>
     <h1
-      class="text-4xl sm:text-6xl md:text-[80px] lg:text-8xl font-bold uppercase text-primary z-10 -mt-8 sm:-mt-10 md:-mt-12 text-end"
+      class="text-4xl sm:text-6xl md:text-[80px] lg:text-8xl font-bold uppercase text-primary z-10 -mt-6 sm:-mt-8 md:-mt-12 text-end"
     >
       {{ secondTitle }}
     </h1>
