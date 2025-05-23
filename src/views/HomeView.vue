@@ -18,7 +18,7 @@ import Footer from '@/components/FooterSection.vue'
     <div
       class="absolute -top-80 scale-75 sm:scale-100 sm:-top-96 md:-top-145 -left-40 sm:-left-32 md:-left-50 z-0"
     >
-      <CircleDecoration />
+      <CircleDecoration color="secondary" />
     </div>
     <!-- <div class="relative z-10 flex flex-col gap-8 sm:gap-12 md:gap-16"> -->
     <!-- <HelloButton /> -->
@@ -37,6 +37,11 @@ import Footer from '@/components/FooterSection.vue'
     <!-- </div> -->
     <SkillsBar />
     <SectionTitle firstTitle="Mon" secondTitle="Parcours" />
+    <div
+      class="absolute top-80 scale-75 sm:scale-100 sm:top-96 md:top-300 -left-80 sm:-left-32 md:-left-150 z-0"
+    >
+      <CircleDecoration color="primary" />
+    </div>
     <ExperienceTimeline class="w-full max-w-5xl" />
     <SectionTitle firstTitle="Mes" secondTitle="Projets" />
     <Footer />
