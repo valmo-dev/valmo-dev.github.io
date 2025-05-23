@@ -63,16 +63,18 @@ const processedEducations = computed(() => processItems(educations, 'education')
 </script>
 
 <template>
-  <section id="experience" class="bg-background-primary">
-    <div class="max-w-5xl mx-auto p-2 border-3 border-black shadow-[8px_8px_0_#000000]">
+  <section id="experience" class="z-10">
+    <div
+      class="w-[90%] max-w-7xl mx-auto p-2 border-3 border-black shadow-[8px_8px_0_#000000] bg-background-primary"
+    >
       <!-- Onglets -->
-      <div class="flex justify-between mb-8">
+      <div class="flex flex-col md:flex-row gap-2 items-center mb-8">
         <button
           @click="activeTab = 'work'"
           :class="[
-            'w-full py-4 px-6 text-2xl font-semibold focus:outline-none transition-colors duration-200 ease-in-out cursor-pointer',
+            ' w-full py-4 px-6 text-2xl font-semibold focus:outline-none transition-colors duration-200 ease-in-out cursor-pointer',
             activeTab === 'work'
-              ? 'bg-secondary text-white  relative -mb-[3px] z-10' // Ombre vers le haut pour l'onglet actif
+              ? 'bg-secondary text-white  relative z-10' // Ombre vers le haut pour l'onglet actif
               : 'bg-background-primary text-neutral-400 hover:text-white hover:bg-neutral-800/60',
           ]"
         >
@@ -81,9 +83,9 @@ const processedEducations = computed(() => processItems(educations, 'education')
         <button
           @click="activeTab = 'education'"
           :class="[
-            'w-full py-4 px-6 text-2xl font-semibold focus:outline-none transition-colors duration-200 ease-in-out ml-2 cursor-pointer',
+            'w-full py-4 px-6 text-2xl font-semibold focus:outline-none transition-colors duration-200 ease-in-out cursor-pointer',
             activeTab === 'education'
-              ? 'bg-secondary text-white  relative -mb-[3px] z-10'
+              ? 'bg-secondary text-white  relative z-10'
               : 'bg-background-primary text-neutral-400 hover:text-white hover:bg-neutral-800/60',
           ]"
         >
@@ -92,7 +94,7 @@ const processedEducations = computed(() => processItems(educations, 'education')
       </div>
 
       <!-- Panneau de Contenu des Onglets -->
-      <div class="bg-secondary p-6 sm:p-8 relative m-12">
+      <div class="p-6 sm:p-8 relative m-12">
         <!-- Contenu Expérience Professionnelle -->
         <div v-show="activeTab === 'work'">
           <h3 class="text-xl font-semibold mb-6 sm:mb-8">Expérience professionnelle</h3>
@@ -100,9 +102,9 @@ const processedEducations = computed(() => processItems(educations, 'education')
             <li
               v-for="job in processedWorkExperience"
               :key="job.uniqueKey"
-              class="grid grid-cols-1 sm:grid-cols-[.5fr_.7fr_3fr] items-center gap-2 sm:gap-x-6 gap-y-4 pb-8 border-b border-black/50 last:border-b-0 last:pb-0"
+              class="flex flex-col justify-center items-center md:grid md:grid-cols-[.5fr_.7fr_3fr] gap-2 sm:gap-x-6 gap-y-4 pb-8 border-b border-black/50 last:border-b-0 last:pb-0"
             >
-              <div class="w-full sm:w-36 text-left text-2xl opacity-70">
+              <div class="w-full sm:w-36 text-center text-2xl opacity-70">
                 {{ job.period }}
               </div>
 
@@ -111,7 +113,7 @@ const processedEducations = computed(() => processItems(educations, 'education')
                   v-if="job.processedLogo"
                   :src="job.processedLogo"
                   :alt="job.company"
-                  class="w-full object-contain"
+                  class="w-full max-w-40 md:max-w-50 object-contain"
                 />
                 <div
                   v-else
@@ -158,22 +160,22 @@ const processedEducations = computed(() => processItems(educations, 'education')
 
         <!-- Contenu Parcours Scolaire -->
         <div v-show="activeTab === 'education'">
-          <h3 class="text-xl font-semibold mb-6 sm:mb-8">Parcours Scolaire</h3>
+          <h3 class="text-xl font-semibold mb-6 sm:mb-8">Parcours scolaire</h3>
           <ul class="space-y-8">
             <li
               v-for="education in processedEducations"
               :key="education.uniqueKey"
-              class="grid grid-cols-1 sm:grid-cols-[.5fr_.7fr_3fr] items-center gap-2 sm:gap-x-6 gap-y-4 pb-8 border-b border-black/50 last:border-b-0 last:pb-0"
+              class="flex flex-col justify-center items-center md:grid md:grid-cols-[.5fr_.7fr_3fr] gap-2 sm:gap-x-6 gap-y-4 pb-8 border-b border-black/50 last:border-b-0 last:pb-0"
             >
-              <div class="w-full sm:w-36 text-left text-2xl opacity-70">
+              <div class="w-full sm:w-36 text-center text-2xl opacity-70">
                 {{ education.period }}
               </div>
-              <div class="flex-shrink-0 self-start sm:self-center sm:mt-0">
+              <div class="sm:mt-0">
                 <img
                   v-if="education.processedLogo"
                   :src="education.processedLogo"
                   :alt="education.school"
-                  class="w-full object-contain"
+                  class="w-full max-w-40 md:max-w-50 object-contain"
                 />
                 <div v-else class="w-20 h-20 flex items-center justify-center shadow-sm">
                   <svg
