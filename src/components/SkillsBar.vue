@@ -19,7 +19,7 @@ const displayedSkills = ref([...skills.value, ...skills.value])
 
 <template>
   <div
-    class="w-full bg-secondary py-4 sm:py-6 overflow-x-hidden border-t-3 border-b-3 border-black"
+    class="w-full bg-secondary py-4 sm:py-6 overflow-x-hidden border-t-3 border-b-3 border-black z-10"
   >
     <div class="flex animate-infinite-scroll group hover:animation-pause">
       <div
