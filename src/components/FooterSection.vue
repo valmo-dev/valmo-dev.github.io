@@ -1,29 +1,38 @@
+<script setup>
+const scrollToSection = (sectionId) => {
+  const section = document.getElementById(sectionId)
+  if (section) {
+    section.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }
+}
+</script>
+
 <template>
-  <footer class="w-full p-8 border-t-8 border-black">
+  <footer class="w-full p-8 border-t-8 border-black z-10">
     <div class="mx-auto max-w-7xl">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
         <div>
           <h3 class="text-2xl mb-4 uppercase tracking-wider font-bold">Liens rapides</h3>
           <ul class="space-y-3">
             <li>
-              <RouterLink
-                class="px-3 py-1 font-bold hover:-translate-y-1 hover:rotate-2 transform transition-all duration-200"
-                to="/"
-                >Accueil</RouterLink
+              <a
+                @click="scrollToSection('hero')"
+                class="px-3 py-1 font-bold hover:-translate-y-1 hover:rotate-2 transform transition-all duration-200 cursor-pointer"
+                >Accueil</a
               >
             </li>
             <li>
-              <RouterLink
-                class="px-3 py-1 font-bold hover:-translate-y-1 hover:rotate-2 transform transition-all duration-200"
-                to="/"
-                >Parcours</RouterLink
+              <a
+                @click="scrollToSection('experience')"
+                class="px-3 py-1 font-bold hover:-translate-y-1 hover:rotate-2 transform transition-all duration-200 cursor-pointer"
+                >Parcours</a
               >
             </li>
             <li>
-              <RouterLink
-                class="px-3 py-1 font-bold hover:-translate-y-1 hover:rotate-2 transform transition-all duration-200"
-                to="/"
-                >Réalisation</RouterLink
+              <a
+                @click="scrollToSection('projects')"
+                class="px-3 py-1 font-bold hover:-translate-y-1 hover:rotate-2 transform transition-all duration-200 cursor-pointer"
+                >Réalisation</a
               >
             </li>
           </ul>
