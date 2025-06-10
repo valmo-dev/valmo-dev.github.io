@@ -43,7 +43,7 @@ const openGithub = (url) => {
 
 <template>
   <div
-    class="w-full max-w-sm h-100 bg-secondary border-3 border-black shadow-[8px_8px_0_#000000] max-h-100 p-4 flex flex-col justify-between mb-12"
+    class="w-full max-w-sm h-100 bg-background-primary border-3 border-black shadow-[8px_8px_0_#000000] max-h-100 p-3 flex flex-col gap-2 justify-between mb-12"
     v-for="(project, index) in projects"
     :key="index"
   >
@@ -61,8 +61,8 @@ const openGithub = (url) => {
       <span class="text-gray-500 font-medium">Projet en cours...</span>
     </div>
     <div class="flex flex-col justify-between gap-3">
-      <div class="z-10 flex flex-row justify-between">
-        <h1 class="font-bold text-2xl">{{ project.title }}</h1>
+      <div class="z-10 flex flex-col sm:flex-row justify-between">
+        <h1 class="font-bold text-2xl text-center">{{ project.title }}</h1>
         <button
           @click="!project.isInProgress && openGithub(project.githubUrl)"
           :class="[
