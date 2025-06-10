@@ -1,11 +1,17 @@
 <script setup>
-import { RouterLink } from 'vue-router'
 import { ref } from 'vue'
 
 const isMobileMenuOpen = ref(false)
 
 const toggleMobileMenu = () => {
   isMobileMenuOpen.value = !isMobileMenuOpen.value
+}
+
+const scrollToSection = (sectionId) => {
+  const section = document.getElementById(sectionId)
+  if (section) {
+    section.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }
 }
 </script>
 
@@ -14,32 +20,32 @@ const toggleMobileMenu = () => {
     <div
       class="mx-auto mt-4 h-[80px] w-full max-w-screen bg-background-primary border-3 border-black shadow-[8px_8px_0_#000000] text-white flex justify-between items-center px-6 transition-transform duration-300 ease-in-out transform translate-y-0"
     >
-      <RouterLink
-        to="/"
-        class="font-semibold text-3xl tracking-tight transform -rotate-2 hover:rotate-0 transition-transform duration-300 min-w-[80px] xs:min-w-[100px]"
-        >Valentin MOREAU</RouterLink
+      <a
+        @click="scrollToSection('hero')"
+        class="font-semibold text-2xl lg:text-3xl tracking-tight transform -rotate-2 hover:rotate-0 transition-transform duration-300 min-w-[80px] xs:min-w-[100px]"
+        >Valentin MOREAU</a
       >
       <div class="hidden md:flex items-center text-base lg:text-lg space-x-6">
-        <RouterLink
-          class="px-3 py-1 font-bold hover:-translate-y-1 hover:rotate-2 transform transition-all duration-200"
-          to="/"
-          >Accueil</RouterLink
+        <a
+          @click="scrollToSection('hero')"
+          class="px-3 py-1 font-bold hover:-translate-y-1 hover:rotate-2 transform transition-all duration-200 cursor-pointer"
+          >Accueil</a
         >
-        <RouterLink
-          class="px-3 py-1 font-bold hover:-translate-y-1 hover:rotate-2 transform transition-all duration-200"
-          to="/"
-          >Parcours</RouterLink
+        <a
+          @click="scrollToSection('experience')"
+          class="px-3 py-1 font-bold hover:-translate-y-1 hover:rotate-2 transform transition-all duration-200 cursor-pointer"
+          >Parcours</a
         >
-        <RouterLink
-          class="px-3 py-1 font-bold hover:-translate-y-1 hover:rotate-2 transform transition-all duration-200"
-          to="/"
-          >Réalisation</RouterLink
+        <a
+          @click="scrollToSection('projects')"
+          class="px-3 py-1 font-bold hover:-translate-y-1 hover:rotate-2 transform transition-all duration-200 cursor-pointer"
+          >Mes projets</a
         >
       </div>
       <div class="flex items-center gap-4">
         <div class="hidden md:block relative">
           <a
-            href=""
+            href="mailto:valmo.dev@gmail.com"
             class="border-3 border-black bg-primary shadow-[8px_8px_0_#000000] inline-flex items-center justify-center whitespace-nowrap h-10 px-4 py-2 hover:shadow-none hover:translate-y-[8px] hover:translate-x-[8px] transition-all"
           >
             Contact</a
@@ -89,28 +95,24 @@ const toggleMobileMenu = () => {
       v-if="isMobileMenuOpen"
       class="md:hidden mt-2 absolute top-[calc(1rem+100px)] left-4 right-4 mx-auto z-40 bg-secondary border-3 border-black shadow-[8px_8px_0_#000000]"
     >
-      <RouterLink
-        to="/"
-        class="block px-4 py-3 text-white hover:bg-primary"
-        @click="toggleMobileMenu"
-        >Accueil</RouterLink
-      >
-      <RouterLink
-        to="/"
-        class="block px-4 py-3 text-white hover:bg-primary"
-        @click="toggleMobileMenu"
-        >Parcours</RouterLink
-      >
-      <RouterLink
-        to="/"
-        class="block px-4 py-3 text-white hover:bg-primary"
-        @click="toggleMobileMenu"
-        >Réalisation</RouterLink
+      <a
+        class="block px-4 py-3 text-white hover:bg-primary cursor-pointer"
+        @click="toggleMobileMenu && scrollToSection('hero')"
+        >Accueil</a
       >
       <a
-        href=""
-        class="block px-4 py-3 text-white bg-primary hover:bg-opacity-70 font-bold text-center"
-        @click="toggleMobileMenu"
+        class="block px-4 py-3 text-white hover:bg-primary cursor-pointer"
+        @click="toggleMobileMenu && scrollToSection('experience')"
+        >Parcours</a
+      >
+      <a
+        class="block px-4 py-3 text-white hover:bg-primary cursor-pointer"
+        @click="toggleMobileMenu && scrollToSection('projects')"
+        >Réalisation</a
+      >
+      <a
+        href="mailto:valmo.dev@gmail.com"
+        class="block px-4 py-3 text-white bg-primary hover:bg-opacity-70 font-bold text-center cursor-pointer"
         >Contact</a
       >
     </div>
