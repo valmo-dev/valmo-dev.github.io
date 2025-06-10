@@ -28,11 +28,11 @@ import Footer from '@/components/FooterSection.vue'
         <CircleDecoration color="secondary" />
       </div> -->
 
-      <Navbar class="top-0 w-full max-w-7xl place-self-center" />
       <section id="hero" class="w-full z-10 flex flex-col justify-between">
+        <Navbar class="top-0 w-full max-w-7xl place-self-center" />
         <HeroTitle firstTitle="Developpeur" secondTitle="Fullstack" />
         <div
-          class="mx-auto w-full max-w-7xl px-5 py-8 md:py-12 text-left flex flex-col lg:flex-row items-center z-10"
+          class="mx-auto w-full max-w-7xl px-5 pt-2 pb-4 md:pt-8 md:pb-8 text-left flex flex-col lg:flex-row items-center z-10"
         >
           <div
             class="w-full lg:w-1/2 mt-8 md:mt-0 flex flex-col items-center lg:items-start lg:ml-8"
@@ -59,7 +59,7 @@ import Footer from '@/components/FooterSection.vue'
       <section id="projects" class="z-10">
         <SectionTitle firstTitle="Mes" secondTitle="Projets" />
         <div
-          class="flex flex-col lg:flex-row gap-8 lg:gap-4 w-full max-w-7xl justify-between items-center px-8 z-10"
+          class="flex flex-col lg:flex-row sm:gap-6 w-full max-w-7xl justify-between items-center px-4 z-10"
         >
           <ProjectCard />
         </div>
