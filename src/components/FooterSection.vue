@@ -39,8 +39,8 @@ const scrollToSection = (sectionId) => {
         </div>
       </div>
       <div class="pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-        <p class="font-semibold text-xl flex flex-row items-center gap-3">
-          <span class="text-3xl">©</span>
+        <p class="font-semibold text-lg sm:text-xl flex flex-row items-center gap-3">
+          <span class="text-xl sm:text-3xl">©</span>
           <span>2025</span>
           <span>Valentin MOREAU</span>
         </p>
