@@ -86,7 +86,7 @@ const processedEducations = computed(() => processItems(educations, 'education')
       </div>
 
       <!-- Panneau de Contenu des Onglets -->
-      <div class="p-6 sm:p-8 relative m-12">
+      <div class="p-4 sm:p-8 sm:m-8 relative">
         <!-- Contenu Expérience Professionnelle -->
         <div v-show="activeTab === 'work'">
           <h3 class="text-xl font-semibold mb-6 sm:mb-8">Expérience professionnelle</h3>
