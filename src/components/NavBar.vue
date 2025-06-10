@@ -22,7 +22,7 @@ const scrollToSection = (sectionId) => {
     >
       <a
         @click="scrollToSection('hero')"
-        class="font-semibold text-2xl lg:text-3xl tracking-tight transform -rotate-2 hover:rotate-0 transition-transform duration-300 min-w-[80px] xs:min-w-[100px]"
+        class="font-semibold text-xl sm:text-2xl lg:text-3xl tracking-tight transform -rotate-2 hover:rotate-0 transition-transform duration-300 min-w-[80px] xs:min-w-[100px]"
         >Valentin MOREAU</a
       >
       <div class="hidden md:flex items-center text-base lg:text-lg space-x-6">
