@@ -1,8 +1,17 @@
+<script setup>
+const scrollToSection = (sectionId) => {
+  const section = document.getElementById(sectionId)
+  if (section) {
+    section.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }
+}
+</script>
+
 <template>
-  <div class="flex flex-col items-center lg:items-start text-center lg:text-left space-y-6">
-    <div class="self-start mb-2 md:mb-4 transform scale-90 sm:scale-100">
+  <div class="flex flex-col items-center lg:items-start text-center lg:text-left space-y-2">
+    <div class="self-start transform scale-90 sm:scale-100">
       <button
-        class="border-3 border-black bg-primary shadow-[8px_8px_0_#000000] inline-flex items-center justify-center whitespace-nowrap h-10 sm:h-12 md:h-14 w-40 sm:w-48 md:w-52 px-3 py-1 font-bold text-xl sm:text-2xl md:text-3xl -rotate-15 text-white"
+        class="border-3 border-black bg-primary shadow-[8px_8px_0_#000000] inline-flex items-center justify-center whitespace-nowrap h-10 sm:h-12 md:h-14 w-40 sm:w-44 md:w-48 px-3 py-1 font-bold text-xl sm:text-2xl md:text-3xl -rotate-15 hover:scale-105 hover:-rotate-10 text-white transition-all"
       >
         Hello <span class="text-2xl sm:text-3xl md:text-4xl ml-1 sm:ml-2">👋</span>
       </button>
@@ -16,7 +25,7 @@
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         alt="Style de calque pour Valentin Moreau"
-        class="h-auto w-full max-w-[800px]"
+        class="h-auto w-full max-w-[450px]"
       >
         <path
           fill-rule="evenodd"
@@ -43,7 +52,7 @@
     <div class="flex flex-col items-center lg:items-start">
       <div class="flex space-x-6 mb-6 mx-4">
         <a
-          href="https://github.com/VOTRE_PSEUDO_GITHUB"
+          href="https://github.com/valmo-dev"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="GitHub Profile"
@@ -65,7 +74,7 @@
           </svg>
         </a>
         <a
-          href="https://www.linkedin.com/in/VOTRE_PROFIL_LINKEDIN"
+          href="https://www.linkedin.com/in/valentin-moreau-312893255/"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="LinkedIn Profile"
@@ -90,8 +99,8 @@
 
       <div class="relative">
         <a
-          href="#"
-          class="border-3 border-black bg-primary shadow-[8px_8px_0_#000000] inline-flex items-center justify-center whitespace-nowrap h-12 px-4 py-2 text-base sm:text-2xl font-normal text-white hover:shadow-none hover:translate-y-[8px] hover:translate-x-[8px] transition-all md:text-lg lg:h-14 lg:text-xl"
+          @click="scrollToSection('story')"
+          class="border-3 border-black bg-primary shadow-[8px_8px_0_#000000] inline-flex items-center justify-center whitespace-nowrap h-12 px-4 py-2 text-base sm:text-2xl font-normal text-white hover:shadow-none hover:translate-y-[8px] hover:translate-x-[8px] transition-all md:text-lg lg:h-14 lg:text-xl cursor-pointer"
         >
           Mon histoire
         </a>
