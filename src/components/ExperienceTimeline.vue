@@ -1,59 +1,51 @@
 <script setup>
 import { ref, computed } from 'vue'
 
-const activeTab = ref('work') // 'work' ou 'education'
+const activeTab = ref('work')
 
-// Données d'expérience professionnelle (gardées en anglais comme dans votre script original)
-// Vous pouvez les traduire si nécessaire
 const workExperience = [
   {
     company: "Lab'Science",
-    logo: '/public/img/labscience.png', // Assurez-vous que ce chemin est correct
-    role: 'Développeur Fullstack', // Traduit pour correspondre à l'image
-    period: '2023 - Now', // "Now" pour correspondre à l'image
-    description: "Développement d'application web pour des outils internes.", // Traduit
+    logo: '/img/labscience.png',
+    role: 'Développeur Fullstack',
+    period: '2023 - 2025',
+    description: "Développement d'application web pour des outils internes.",
     tags: ['Vue.js 3', 'Laravel', 'PHP', 'JavaScript', 'Docker', 'MySQL'],
   },
   {
-    company: 'Armée de Terre', // Traduit
-    logo: '/public/img/army.svg', // Assurez-vous que ce chemin est correct
-    role: "Chef d'engin, Chef de groupe (8 pers.), Chef d'équipe (3 pers.)", // Traduit
+    company: 'Armée de Terre',
+    logo: '/img/army.svg',
+    role: "Chef d'engin, Chef de groupe (8 pers.), Chef d'équipe (3 pers.)",
     description:
-      "Gestion d'un véhicule de combat, et d'une équipe de 3 personnes la plupart du temps. Gestion d'un groupe de 8 personnes quelques fois.", // Traduit
+      "Gestion d'un véhicule de combat, et d'une équipe de 3 personnes la plupart du temps. Gestion d'un groupe de 8 personnes quelques fois.",
     period: '2018 - 2023',
   },
 ]
 
-// Données de parcours scolaire (gardées en anglais comme dans votre script original)
 const educations = [
   {
     school: 'CEFIM',
-    logo: '/public/img/cefim.png', // Assurez-vous que ce chemin est correct
-    degree: 'Concepteur Développeur d’Applications', // Traduit
-    period: '2024 - now', // "now" pour correspondre à l'image
+    logo: '/img/cefim.png',
+    degree: 'Concepteur Développeur d’Applications',
+    period: '2024 - 2025',
     description:
-      'Apprentissage de la gestion de projet, des bonnes pratiques et des outils pour concevoir et développer des applications web modernes.', // Traduit
+      'Apprentissage de la gestion de projet, des bonnes pratiques et des outils pour concevoir et développer des applications web modernes.',
     tags: ['Méthodes Agiles', 'Docker', 'Git'],
   },
   {
     school: 'CEFIM',
-    logo: '/public/img/cefim.png',
-    degree: 'Développeur Web', // Traduit
+    logo: '/img/cefim.png',
+    degree: 'Développeur Web',
     period: '2023 - 2024',
-    description: 'Apprentissage de la création d’applications web modernes.', // Traduit
+    description: 'Apprentissage de la création d’applications web modernes.',
     tags: ['React', 'Symfony', 'PHP', 'JavaScript', 'MySQL'],
   },
 ]
 
-// Fonction pour traiter les items (logos, clés uniques)
 const processItems = (items, type) => {
   return items.map((item, index) => ({
     ...item,
-    // Les navigateurs modernes gèrent bien les chemins relatifs dans les attributs src des images
-    // si les assets sont correctement servis par Vite.
-    // Si vous rencontrez des problèmes, vous pouvez réactiver la ligne ci-dessous :
-    // processedLogo: item.logo ? new URL(item.logo, import.meta.url).href : null,
-    processedLogo: item.logo, // Utilisation directe du chemin
+    processedLogo: item.logo,
     uniqueKey: `${type}-${(item.company || item.school || 'item').replace(/\s+/g, '-')}-${index}`,
   }))
 }
@@ -74,7 +66,7 @@ const processedEducations = computed(() => processItems(educations, 'education')
           :class="[
             ' w-full py-4 px-6 text-2xl font-semibold focus:outline-none transition-colors duration-200 ease-in-out cursor-pointer',
             activeTab === 'work'
-              ? 'bg-secondary text-white  relative z-10' // Ombre vers le haut pour l'onglet actif
+              ? 'bg-secondary text-white  relative z-10'
               : 'bg-background-primary text-neutral-400 hover:text-white hover:bg-neutral-800/60',
           ]"
         >
