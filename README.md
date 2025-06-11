@@ -1,35 +1,31 @@
-# portfolio-v2
+# Portfolio V2 🚀
 
-This template should help get you started developing with Vue 3 in Vite.
+Un portfolio moderne, dans un style néo-brutalisme, développé avec Vue 3, Vite et TailwindCSS.
 
-## Recommended IDE Setup
+## ✨ Fonctionnalités
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- 🎨 Design moderne et responsive
+- ⚡ Performance optimisée avec Vite
+- 🎯 Interface utilisateur intuitive
+- 📱 Compatible mobile et desktop
+- 🌙 Animations fluides et transitions
+- 🔧 Code maintenable et modulaire
 
-## Customize configuration
+## 🛠️ Technologies utilisées
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+- **Frontend Framework:** Vue 3 (Composition API)
+- **Build Tool:** Vite
+- **Styling:** TailwindCSS v4
+- **Linting:** ESLint + Oxlint
+- **Formatting:** Prettier
+- **Development:** Vue DevTools
 
-## Project Setup
+## 🎨 Composants principaux
 
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+- **Navbar** - Navigation principale
+- **HeroSection** - Section d'accueil avec titre et avatar
+- **StorySection** - Section "à propos"
+- **SkillsBar** - Barre d'affichage des compétences
+- **ExperienceTimeline** - Timeline d'expériences
+- **ProjectCard** - Cartes de projets
+- **FooterSection** - Pied de page
