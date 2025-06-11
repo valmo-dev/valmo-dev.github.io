@@ -95,12 +95,35 @@ const scrollToSection = (sectionId) => {
             ></path>
           </svg>
         </a>
+        <a
+          href="/CV_Valentin_MOREAU.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Télécharger mon CV"
+          class="text-white hover:text-primary transition-all duration-300 hover:scale-125"
+        >
+          <svg
+            stroke="currentColor"
+            fill="currentColor"
+            stroke-width="0"
+            viewBox="0 0 24 24"
+            class="text-4xl"
+            height="1em"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"
+            />
+            <path d="M12,19L8,15H10.5V12H13.5V15H16L12,19Z" />
+          </svg>
+        </a>
       </div>
 
       <div class="relative">
         <a
           @click="scrollToSection('story')"
-          class="border-3 border-black bg-primary shadow-[8px_8px_0_#000000] inline-flex items-center justify-center whitespace-nowrap h-12 px-4 py-2 text-base sm:text-2xl font-normal text-white hover:shadow-none hover:translate-y-[8px] hover:translate-x-[8px] transition-all md:text-lg lg:h-14 lg:text-xl cursor-pointer"
+          class="border-3 border-black bg-primary shadow-[8px_8px_0_#000000] inline-flex items-center justify-center whitespace-nowrap h-12 px-6 sm:px-8 py-2 text-base sm:text-2xl font-normal text-white hover:shadow-none hover:translate-y-[8px] hover:translate-x-[8px] transition-all md:text-lg lg:h-14 lg:text-xl cursor-pointer"
         >
           Mon histoire
         </a>
